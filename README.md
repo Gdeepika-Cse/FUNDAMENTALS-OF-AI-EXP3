@@ -107,4 +107,4 @@ else:
 <img width="712" height="803" alt="image" src="https://github.com/user-attachments/assets/dc5e4c38-4a57-45f6-8691-bc64bd909ff4" />
 
 ## Result:
-<p>Thus,a Graph was constructed and implementation of Breadth First Search for the same graph was done successfully.</p>
+Thus,a Graph was constructed and implementation of Breadth First Search for the same graph was done successfully.
