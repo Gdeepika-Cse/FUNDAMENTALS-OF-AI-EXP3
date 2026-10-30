@@ -1,10 +1,11 @@
 # BREADTH-FIRST-SEARCH
-<h1>ExpNo 3 : Implement Breadth First Search Traversal of a Graph</h1> 
-<h3>Name:DEEPIKA G  </h3>
-<h3>Register Number:212224040060 </h3>
-<H3>Aim:</H3>
-<p>To Implement Breadth First Search Traversal of a Graph using Python 3.</p>
-<h3>Theory:</h3>
+## ExpNo 3 : Implement Breadth First Search Traversal of a Graph
+## Name:DEEPIKA G  
+## Register Number:212224040060
+## Aim:
+To Implement Breadth First Search Traversal of a Graph using Python 3.
+
+## Theory:
 <p>Breadth-First Traversal (or Search) for a graph is like the Breadth-First Traversal of a tree.
 The only catch here is that, unlike trees, graphs may contain cycles so that we may come to the same node again. To avoid processing a node more than once, we divide the vertices into two categories:
 <ol><li>Visited</li>
@@ -14,10 +15,10 @@ The only catch here is that, unlike trees, graphs may contain cycles so that we 
 <p><strong>How does BFS work?</strong><br>
   Starting from the root, all the nodes at a particular level are visited first, and then the next level nodes are traversed until all the nodes are visited.
 To do this, a queue is used. All the adjacent unvisited nodes of the current level are pushed into the queue, and the current-level nodes are marked visited and popped from the queue.
-Illustration:
+  
+## Illustration:
 Let us understand the working of the algorithm with the help of the following example.
 Step1: Initially queue and visited arrays are empty.
-</p>
 
 ![image](https://github.com/natsaravanan/19AI405FUNDAMENTALSOFARTIFICIALINTELLIGENCE/assets/87870499/8acdebf8-ecc2-4d10-a208-45cce441f059)
 
@@ -64,7 +65,6 @@ Now, Queue becomes empty, So, terminate these process of iteration.
 ## PROGRAM:
 ```
 from collections import deque, defaultdict
-
 def bfs(graph, start, visited, path):
     queue = deque()
     visited[start] = True
@@ -81,25 +81,19 @@ def bfs(graph, start, visited, path):
                 path.append(neighbour)
 
     return path
-
 graph = defaultdict(list)
 
 v, e = map(int, input("Enter the number of nodes and edges: ").split())
-
 print("\nEnter the edges (Adjacent Nodes):")
-
 for i in range(e):
     u, w = input(f"Edge {i+1} (u v): ").split()
     graph[u].append(w)
     graph[w].append(u)
-
 print("\nAdjacency List:")
-
 for node in graph:
     print(node, "->", graph[node])
 
 start = input("\nEnter the start node for BFS: ")
-
 if start not in graph:
     print("Invalid start node!")
 else:
